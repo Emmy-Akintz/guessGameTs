@@ -72,8 +72,8 @@ const easyMode: () => void = () => {
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`);
                 console.log(`Congratulations! You won!`);
+                console.log(`You have guessed right and the number is ${randomNum}`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -110,8 +110,8 @@ const mediumMode: () => void = () => {
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`);
                 console.log(`Congratulations! You won!`);
+                console.log(`You have guessed right and the number is ${randomNum}`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -147,8 +147,8 @@ const hardMode: () => void = () => {
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`);
                 console.log(`Congratulations! You won!`);
+                console.log(`You have guessed right and the number is ${randomNum}`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -184,8 +184,8 @@ const bossMode: () => void = () => {
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`);
                 console.log(`Congratulations! You won!`);
+                console.log(`You have guessed right and the number is ${randomNum}`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
