@@ -42,12 +42,12 @@ guessGame()
 
 const permission: () => void = () => {
     rl.question('Do you wish to continue [Y/N]: ', (answer) => {
-        const userPermit: string = answer
+        const userPermit: string = answer.toUpperCase()
 
-        if (userPermit == 'y' || userPermit == 'Y') {
+        if (userPermit == 'Y') {
             console.log('Okay!!')
             guessGame()
-        } else if (userPermit == 'n' || userPermit == 'N') {
+        } else if (userPermit == 'N') {
             console.log('Have a nice day!!')
             rl.close()
         } else {
@@ -55,6 +55,8 @@ const permission: () => void = () => {
         }
     })
 }
+
+// ... (Previous code remains unchanged)
 
 const easyMode: () => void = () => {
     const randomNum: number = Math.round(Math.random() * 10);
@@ -71,7 +73,14 @@ const easyMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                permission();
+                if (userAttempt > 0) {
+                    console.log(`Congratulations! You won!`);
+                } else {
+                    console.log(`You lost!`);
+                    console.log(`The value is ${randomNum}`);
+                }
+                permission(); // Call permission() only once after winning or losing
+                return; // Exit the function to prevent further execution
             } else {
                 console.log('ERROR 404 :(');
             }
@@ -107,7 +116,14 @@ const mediumMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                permission();
+                if (userAttempt > 0) {
+                    console.log(`Congratulations! You won!`);
+                } else {
+                    console.log(`You lost!`);
+                    console.log(`The value is ${randomNum}`);
+                }
+                permission(); // Call permission() only once after winning or losing
+                return; // Exit the function to prevent further execution
             } else {
                 console.log('ERROR 404 :(');
             }
@@ -142,7 +158,14 @@ const hardMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                permission();
+                if (userAttempt > 0) {
+                    console.log(`Congratulations! You won!`);
+                } else {
+                    console.log(`You lost!`);
+                    console.log(`The value is ${randomNum}`);
+                }
+                permission(); // Call permission() only once after winning or losing
+                return; // Exit the function to prevent further execution
             } else {
                 console.log('ERROR 404 :(');
             }
@@ -177,7 +200,14 @@ const bossMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                permission();
+                if (userAttempt > 0) {
+                    console.log(`Congratulations! You won!`);
+                } else {
+                    console.log(`You lost!`);
+                    console.log(`The value is ${randomNum}`);
+                }
+                permission(); // Call permission() only once after winning or losing
+                return; // Exit the function to prevent further execution
             } else {
                 console.log('ERROR 404 :(');
             }
@@ -191,7 +221,7 @@ const bossMode: () => void = () => {
                 permission();
             }
         });
-    };
+    }
 
     getUserInput(); // Initial call to start the sequence
-};
+}
