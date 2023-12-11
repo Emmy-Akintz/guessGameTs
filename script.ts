@@ -73,12 +73,7 @@ const easyMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                if (userAttempt > 0) {
-                    console.log(`Congratulations! You won!`);
-                } else {
-                    console.log(`You lost!`);
-                    console.log(`The value is ${randomNum}`);
-                }
+                console.log(`Congratulations! You won!`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -86,7 +81,7 @@ const easyMode: () => void = () => {
             }
 
             if (userAttempt > 0) {
-                console.log(`You have ${userAttempt} attempts left.`);
+                console.log(`You have ${userAttempt} attempt(s) left.`);
                 getUserInput(); // Call the function recursively for the next iteration
             } else {
                 console.log(`You lost!`);
@@ -116,12 +111,7 @@ const mediumMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                if (userAttempt > 0) {
-                    console.log(`Congratulations! You won!`);
-                } else {
-                    console.log(`You lost!`);
-                    console.log(`The value is ${randomNum}`);
-                }
+                console.log(`Congratulations! You won!`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -129,7 +119,7 @@ const mediumMode: () => void = () => {
             }
 
             if (userAttempt > 0) {
-                console.log(`You have ${userAttempt} attempts left.`);
+                console.log(`You have ${userAttempt} attempt(s) left.`);
                 getUserInput(); // Call the function recursively for the next iteration
             } else {
                 console.log(`You lost!`);
@@ -158,12 +148,7 @@ const hardMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                if (userAttempt > 0) {
-                    console.log(`Congratulations! You won!`);
-                } else {
-                    console.log(`You lost!`);
-                    console.log(`The value is ${randomNum}`);
-                }
+                console.log(`Congratulations! You won!`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -171,7 +156,7 @@ const hardMode: () => void = () => {
             }
 
             if (userAttempt > 0) {
-                console.log(`You have ${userAttempt} attempts left.`);
+                console.log(`You have ${userAttempt} attempt(s) left.`);
                 getUserInput(); // Call the function recursively for the next iteration
             } else {
                 console.log(`You lost!`);
@@ -200,12 +185,7 @@ const bossMode: () => void = () => {
                 console.log(`The number is greater than the random number`);
             } else if (userNum === randomNum) {
                 console.log(`You have guessed right and the number is ${randomNum}`);
-                if (userAttempt > 0) {
-                    console.log(`Congratulations! You won!`);
-                } else {
-                    console.log(`You lost!`);
-                    console.log(`The value is ${randomNum}`);
-                }
+                console.log(`Congratulations! You won!`);
                 permission(); // Call permission() only once after winning or losing
                 return; // Exit the function to prevent further execution
             } else {
@@ -213,7 +193,7 @@ const bossMode: () => void = () => {
             }
 
             if (userAttempt > 0) {
-                console.log(`You have ${userAttempt} attempts left.`);
+                console.log(`You have ${userAttempt} attempt(s) left.`);
                 getUserInput(); // Call the function recursively for the next iteration
             } else {
                 console.log(`You lost!`);
