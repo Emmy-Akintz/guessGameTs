@@ -57,134 +57,141 @@ const permission: () => void = () => {
 }
 
 const easyMode: () => void = () => {
-    const randomNum: number = Math.round(Math.random() * 10)
+    const randomNum: number = Math.round(Math.random() * 10);
+    let userAttempt: number = 5;
 
-    let userAttempt: number = 5
+    const getUserInput = () => {
+        rl.question(`Input a number: `, (answer) => {
+            let userNum: number = parseInt(answer);
+            userAttempt = userAttempt - 1;
+
+            if (userNum < randomNum) {
+                console.log(`The number is less than the random number.`);
+            } else if (userNum > randomNum) {
+                console.log(`The number is greater than the random number`);
+            } else if (userNum === randomNum) {
+                console.log(`You have guessed right and the number is ${randomNum}`);
+                permission();
+            } else {
+                console.log('ERROR 404 :(');
+            }
+
+            if (userAttempt > 0) {
+                console.log(`You have ${userAttempt} attempts left.`);
+                getUserInput(); // Call the function recursively for the next iteration
+            } else {
+                console.log(`You lost!`);
+                console.log(`The value is ${randomNum}`);
+                permission();
+            }
+        });
+    };
 
     console.log(`Guess a number from the range 0 to 10 and you have ${userAttempt} attempts!`);
-
-    for (let i: number = 0; i < 5; i++) {
-        rl.question(`Input a number: `, (answer) => {
-            let userNum: number = parseInt(answer)
-
-            userAttempt = userAttempt - 1
-
-            if (userNum < randomNum) {
-                console.log(`The number is less than the random number.`);
-            } else if (userNum > randomNum) {
-                console.log(`The number is greater than the random number`);
-            } else if (userNum = randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`)
-                permission()
-                // break
-            } else {
-                console.log('ERROR 404 :(')
-            }
-        })
-    }
-
-    if (userAttempt == 0) {
-        console.log(`You lost!`)
-        console.log(`The value is ${randomNum}`)
-        permission()
-    }
-}
+    getUserInput(); // Initial call to start the sequence
+};
 
 const mediumMode: () => void = () => {
-    const randomNum: number = Math.round(Math.random() * 100)
+    const randomNum: number = Math.round(Math.random() * 100);
+    let userAttempt: number = 10;
 
-    let userAttempt: number = 10
-
-    for (let i: number = 0; i < 10; i++) {
-        console.log(`Guess a number from the range 0 - 100 and you have ${userAttempt} attempts!`)
+    const getUserInput = () => {
+        console.log(`Guess a number from the range 0 - 100 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
-            let userNum: number = parseInt(answer)
-
-            userAttempt = userAttempt - 1
+            let userNum: number = parseInt(answer);
+            userAttempt = userAttempt - 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
-            } else if (userNum = randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`)
-                permission()
-                // break
+            } else if (userNum === randomNum) {
+                console.log(`You have guessed right and the number is ${randomNum}`);
+                permission();
             } else {
-                console.log('ERROR 404 :(')
+                console.log('ERROR 404 :(');
             }
-        })
-    }
 
-    if (userAttempt == 0) {
-        console.log(`You lost!`)
-        console.log(`The value is ${randomNum}`)
-        permission()
-    }
-}
+            if (userAttempt > 0) {
+                console.log(`You have ${userAttempt} attempts left.`);
+                getUserInput(); // Call the function recursively for the next iteration
+            } else {
+                console.log(`You lost!`);
+                console.log(`The value is ${randomNum}`);
+                permission();
+            }
+        });
+    };
+
+    getUserInput(); // Initial call to start the sequence
+};
 
 const hardMode: () => void = () => {
-    const randomNum = Math.round(Math.random() * 1000)
+    const randomNum: number = Math.round(Math.random() * 1000);
+    let userAttempt: number = 10;
 
-    let userAttempt = 10
-
-    for (let i: number = 0; i < 10; i++) {
-        console.log(`Guess a number from the range 0 - 1000 and you have ${userAttempt} attempts!`)
+    const getUserInput = () => {
+        console.log(`Guess a number from the range 0 - 1000 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
-            let userNum: number = parseInt(answer)
-
-            userAttempt = userAttempt - 1
+            let userNum: number = parseInt(answer);
+            userAttempt = userAttempt - 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
-            } else if (userNum = randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`)
-                permission()
-                // break
+            } else if (userNum === randomNum) {
+                console.log(`You have guessed right and the number is ${randomNum}`);
+                permission();
             } else {
-                console.log('ERROR 404 :(')
+                console.log('ERROR 404 :(');
             }
-        })
-    }
 
-    if (userAttempt == 0) {
-        console.log(`You lost!`)
-        console.log(`The value is ${randomNum}`)
-        permission()
-    }
-}
+            if (userAttempt > 0) {
+                console.log(`You have ${userAttempt} attempts left.`);
+                getUserInput(); // Call the function recursively for the next iteration
+            } else {
+                console.log(`You lost!`);
+                console.log(`The value is ${randomNum}`);
+                permission();
+            }
+        });
+    };
+
+    getUserInput(); // Initial call to start the sequence
+};
 
 const bossMode: () => void = () => {
-    const randomNum: number = Math.round(Math.random() * 10000)
+    const randomNum: number = Math.round(Math.random() * 10000);
+    let userAttempt: number = 20;
 
-    let userAttempt = 20
-
-    for (let i: number = 0; i < 20; i++) {
-        console.log(`Guess a number from the range 0 - 10000 and you have ${userAttempt} attempts!`)
+    const getUserInput = () => {
+        console.log(`Guess a number from the range 0 - 10000 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
-            let userNum: number = parseInt(answer)
-
-            userAttempt = userAttempt - 1
+            let userNum: number = parseInt(answer);
+            userAttempt = userAttempt - 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
             } else if (userNum > randomNum) {
                 console.log(`The number is greater than the random number`);
-            } else if (userNum = randomNum) {
-                console.log(`You have guessed right and the number is ${randomNum}`)
-                permission()
-                // break
+            } else if (userNum === randomNum) {
+                console.log(`You have guessed right and the number is ${randomNum}`);
+                permission();
             } else {
-                console.log('ERROR 404 :(')
+                console.log('ERROR 404 :(');
             }
-        })
-    }
 
-    if (userAttempt == 0) {
-        console.log(`You lost!`)
-        console.log(`The value is ${randomNum}`)
-        permission()
-    }
-}
+            if (userAttempt > 0) {
+                console.log(`You have ${userAttempt} attempts left.`);
+                getUserInput(); // Call the function recursively for the next iteration
+            } else {
+                console.log(`You lost!`);
+                console.log(`The value is ${randomNum}`);
+                permission();
+            }
+        });
+    };
+
+    getUserInput(); // Initial call to start the sequence
+};
