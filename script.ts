@@ -56,8 +56,6 @@ const permission: () => void = () => {
     })
 }
 
-// ... (Previous code remains unchanged)
-
 const easyMode: () => void = () => {
     const randomNum: number = Math.round(Math.random() * 10);
     let userAttempt: number = 5;
@@ -93,7 +91,7 @@ const easyMode: () => void = () => {
 
     console.log(`Guess a number from the range 0 to 10 and you have ${userAttempt} attempts!`);
     getUserInput(); // Initial call to start the sequence
-};
+}
 
 const mediumMode: () => void = () => {
     const randomNum: number = Math.round(Math.random() * 100);
@@ -130,7 +128,7 @@ const mediumMode: () => void = () => {
     };
 
     getUserInput(); // Initial call to start the sequence
-};
+}
 
 const hardMode: () => void = () => {
     const randomNum: number = Math.round(Math.random() * 1000);
@@ -167,7 +165,7 @@ const hardMode: () => void = () => {
     };
 
     getUserInput(); // Initial call to start the sequence
-};
+}
 
 const bossMode: () => void = () => {
     const randomNum: number = Math.round(Math.random() * 10000);
