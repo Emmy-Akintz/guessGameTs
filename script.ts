@@ -63,7 +63,7 @@ const easyMode: () => void = () => {
     const getUserInput = () => {
         rl.question(`Input a number: `, (answer) => {
             let userNum: number = parseInt(answer);
-            userAttempt = userAttempt - 1;
+            userAttempt -= 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
@@ -101,7 +101,7 @@ const mediumMode: () => void = () => {
         console.log(`Guess a number from the range 0 - 100 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
             let userNum: number = parseInt(answer);
-            userAttempt = userAttempt - 1;
+            userAttempt -= 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
@@ -138,7 +138,7 @@ const hardMode: () => void = () => {
         console.log(`Guess a number from the range 0 - 1000 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
             let userNum: number = parseInt(answer);
-            userAttempt = userAttempt - 1;
+            userAttempt -= 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
@@ -175,7 +175,7 @@ const bossMode: () => void = () => {
         console.log(`Guess a number from the range 0 - 10000 and you have ${userAttempt} attempts!`);
         rl.question('Input a number: ', (answer) => {
             let userNum: number = parseInt(answer);
-            userAttempt = userAttempt - 1;
+            userAttempt -= 1;
 
             if (userNum < randomNum) {
                 console.log(`The number is less than the random number.`);
